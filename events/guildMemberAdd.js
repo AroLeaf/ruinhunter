@@ -1,3 +1,3 @@
 import { Event } from '@aroleaf/djs-bot';
 
-export default new Event({ event: 'guildMemberAdd' }, async message => message.client.antiraid.call(message.guild.id, message.member));
+export default new Event({ event: 'guildMemberAdd' }, async member => member.client.antiraid.call(member.guild.id, member));
