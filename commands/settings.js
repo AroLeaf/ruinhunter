@@ -17,6 +17,9 @@ export default new SlashCommand({
     min_value: 1,
     required: true,
   }],
+  permissions: {
+    user: 1n<<2n,
+  },
 }, async interaction => {
   const [joins, per] = ['joins', 'per'].map(p => interaction.options.getInteger(p));
   

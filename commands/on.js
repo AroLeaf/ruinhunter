@@ -4,6 +4,9 @@ import db from '../db.js';
 export default new SlashCommand({
   name: 'on',
   description: 'turn the antiraid on',
+  permissions: {
+    user: 1n<<2n,
+  },
 }, async interaction => {
   const reply = content => interaction.reply({ content, ephemeral: true });
   
