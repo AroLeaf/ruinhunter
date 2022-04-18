@@ -2,12 +2,11 @@ import { loader } from '@aroleaf/djs-bot';
 import 'dotenv/config';
 
 const commands = await loader('commands');
-const events = await loader('events');
 
 const config = {
   intents: [1<<0, 1<<1, 1<<9],
   owner: '659488296820408355',
-  commands, events,
+  commands,
   presence: {
     status: 'online',
     activities: [{
