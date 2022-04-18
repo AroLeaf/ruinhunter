@@ -29,7 +29,7 @@ export default new SlashCommand({
     user: 1n<<3n,
   },
 }, async interaction => {
-  const [joins, per, age] = ['joins', 'per', 'age'].map(p => interaction.options.getInteger(p));
+  const [joins, per, age] = ['joins', 'per', 'max-age'].map(p => interaction.options.getInteger(p, false));
   
   const settings = interaction.client.antiraid.settings(interaction.member);
   
